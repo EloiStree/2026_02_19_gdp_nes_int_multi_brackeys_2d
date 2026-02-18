@@ -187,28 +187,28 @@ tile_set = SubResource("TileSet_4op6i")
 [node name="NodePlayers" type="Node" parent="." unique_id=1169403456]
 
 [node name="NesPlayerExample" parent="NodePlayers" unique_id=1010559735 instance=ExtResource("2_ttjwc")]
-position = Vector2(-131, 7)
+position = Vector2(-154, 7)
 
 [node name="NesPlayerExample2" parent="NodePlayers" unique_id=1020971992 instance=ExtResource("2_ttjwc")]
-position = Vector2(-113, 7)
+position = Vector2(-124, 7)
 
 [node name="NesPlayerExample3" parent="NodePlayers" unique_id=1754076435 instance=ExtResource("2_ttjwc")]
-position = Vector2(-92, 7)
+position = Vector2(-191, 3)
 
 [node name="NesPlayerExample4" parent="NodePlayers" unique_id=1312103704 instance=ExtResource("2_ttjwc")]
-position = Vector2(-73, 7)
+position = Vector2(-86, 6)
 
 [node name="NesPlayerExample5" parent="NodePlayers" unique_id=615244096 instance=ExtResource("2_ttjwc")]
-position = Vector2(-56, 7)
+position = Vector2(-56, -101)
 
 [node name="NesPlayerExample6" parent="NodePlayers" unique_id=1604507029 instance=ExtResource("2_ttjwc")]
-position = Vector2(-39, 7)
+position = Vector2(100, 7)
 
 [node name="NesPlayerExample7" parent="NodePlayers" unique_id=1906773681 instance=ExtResource("2_ttjwc")]
-position = Vector2(-16, 7)
+position = Vector2(-37, 6)
 
 [node name="NesPlayerExample8" parent="NodePlayers" unique_id=42701732 instance=ExtResource("2_ttjwc")]
-position = Vector2(13, 7)
+position = Vector2(7, 52)
 
 [node name="NesPlayerExample9" parent="NodePlayers" unique_id=1905186612 instance=ExtResource("2_ttjwc")]
 position = Vector2(36, 7)
