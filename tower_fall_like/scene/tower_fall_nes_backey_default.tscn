@@ -1,0 +1,298 @@
+[gd_scene format=4 uid="uid://b8mlwr23kjvkm"]
+
+[ext_resource type="Texture2D" uid="uid://c5o3qqjgfpjfk" path="res://addons/2026_02_19_gdp_nes_int_multi_brackeys_2d/brackeys_bundle/sprites/world_tileset.png" id="1_7xp0x"]
+[ext_resource type="PackedScene" uid="uid://dgu7n333xk7tg" path="res://addons/2026_02_19_gdp_nes_int_multi_brackeys_2d/tower_fall_like/scene/element/nes_2d_player_example.tscn" id="2_ttjwc"]
+[ext_resource type="Script" uid="uid://c4hx86aoycb3v" path="res://addons/2026_01_18_gdp_nes_udp_multiplayer/script/nes_multi_listen_udp_in_iid.gd" id="3_bht6a"]
+[ext_resource type="Script" uid="uid://dv07ptgo47gmx" path="res://addons/2026_01_18_gdp_nes_udp_multiplayer/script/nes_multi_iid_delayer_relative.gd" id="4_tyxex"]
+[ext_resource type="Script" uid="uid://cw58cuw7hppa2" path="res://addons/2026_01_18_gdp_nes_udp_multiplayer/script/nes_multi_debug_iid_to_string_event.gd" id="5_igfj7"]
+[ext_resource type="Script" uid="uid://b7w8e3iwhdjw2" path="res://addons/2026_01_18_gdp_nes_udp_multiplayer/script/nes_multi_player_lobby_broadcaster.gd" id="6_52r5k"]
+[ext_resource type="Script" uid="uid://166a4h57h6k6" path="res://addons/2026_01_18_gdp_nes_udp_multiplayer/script/nes_multi_display_ipv4_list.gd" id="8_tifum"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ttjwc"]
+texture = ExtResource("1_7xp0x")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:0/0 = 0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:0/0 = 0
+9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -6.6547728, 8, 0, -8, -2.6978807)
+10:0/0 = 0
+10:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.3957615, 8, -5.2159023, 8, 1.0791531, -8, 1.0791531)
+11:0/0 = 0
+11:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.3957615, 8, -8, 8, -1.2590103, -8, 1.0791531)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:1/0 = 0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:1/0 = 0
+9:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -6.6547728, 8, 0, -8, -2.6978807)
+10:1/0 = 0
+10:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.3957615, 8, -5.2159023, 8, 1.0791531, -8, 1.0791531)
+11:1/0 = 0
+11:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.3957615, 8, -8, 8, -1.2590103, -8, 1.0791531)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:2/0 = 0
+6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:2/0 = 0
+7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:2/0 = 0
+8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:2/0 = 0
+9:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -6.6547728, 8, 0, -8, -2.6978807)
+10:2/0 = 0
+10:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.3957615, 8, -5.2159023, 8, 1.0791531, -8, 1.0791531)
+11:2/0 = 0
+11:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.3957615, 8, -8, 8, -1.2590103, -8, 1.0791531)
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+3:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+0:8/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+0:9/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+0:10/0 = 0
+1:10/0 = 0
+2:10/0 = 0
+3:10/0 = 0
+4:10/0 = 0
+6:10/0 = 0
+0:11/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+0:12/0 = 0
+1:12/0 = 0
+2:12/0 = 0
+3:12/0 = 0
+4:12/0 = 0
+0:13/0 = 0
+1:13/0 = 0
+2:13/0 = 0
+3:13/0 = 0
+4:13/0 = 0
+5:13/0 = 0
+0:14/0 = 0
+1:14/0 = 0
+2:14/0 = 0
+3:14/0 = 0
+4:14/0 = 0
+0:15/0 = 0
+1:15/0 = 0
+2:15/0 = 0
+3:15/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_4op6i"]
+physics_layer_0/collision_layer = 15
+sources/0 = SubResource("TileSetAtlasSource_ttjwc")
+
+[node name="TowerFallNesBackeyDefault" type="Node2D" unique_id=535642397]
+
+[node name="TileMap" type="TileMapLayer" parent="." unique_id=742217102]
+tile_map_data = PackedByteArray("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")
+tile_set = SubResource("TileSet_4op6i")
+
+[node name="NodePlayers" type="Node" parent="." unique_id=1169403456]
+
+[node name="NesPlayerExample" parent="NodePlayers" unique_id=1010559735 instance=ExtResource("2_ttjwc")]
+position = Vector2(-131, 7)
+
+[node name="NesPlayerExample2" parent="NodePlayers" unique_id=1020971992 instance=ExtResource("2_ttjwc")]
+position = Vector2(-113, 7)
+
+[node name="NesPlayerExample3" parent="NodePlayers" unique_id=1754076435 instance=ExtResource("2_ttjwc")]
+position = Vector2(-92, 7)
+
+[node name="NesPlayerExample4" parent="NodePlayers" unique_id=1312103704 instance=ExtResource("2_ttjwc")]
+position = Vector2(-73, 7)
+
+[node name="NesPlayerExample5" parent="NodePlayers" unique_id=615244096 instance=ExtResource("2_ttjwc")]
+position = Vector2(-56, 7)
+
+[node name="NesPlayerExample6" parent="NodePlayers" unique_id=1604507029 instance=ExtResource("2_ttjwc")]
+position = Vector2(-39, 7)
+
+[node name="NesPlayerExample7" parent="NodePlayers" unique_id=1906773681 instance=ExtResource("2_ttjwc")]
+position = Vector2(-16, 7)
+
+[node name="NesPlayerExample8" parent="NodePlayers" unique_id=42701732 instance=ExtResource("2_ttjwc")]
+position = Vector2(13, 7)
+
+[node name="NesPlayerExample9" parent="NodePlayers" unique_id=1905186612 instance=ExtResource("2_ttjwc")]
+position = Vector2(36, 7)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=748590657]
+
+[node name="NesMultiListenUdpInIID" type="Node" parent="." unique_id=832466324]
+script = ExtResource("3_bht6a")
+allowed_ipv4_array = []
+use_debug_print = true
+metadata/_custom_type_script = "uid://c4hx86aoycb3v"
+
+[node name="NesMultiIidDelayerRelative" type="Node" parent="NesMultiListenUdpInIID" unique_id=1815831447]
+script = ExtResource("4_tyxex")
+metadata/_custom_type_script = "uid://dv07ptgo47gmx"
+
+[node name="NesMultiDebugIidToStringEvent" type="Node" parent="NesMultiListenUdpInIID" unique_id=626860510]
+script = ExtResource("5_igfj7")
+
+[node name="NesMultiPlayerLobbyBroadcaster" type="Node" parent="NesMultiListenUdpInIID" unique_id=1900222890 node_paths=PackedStringArray("parent_to_overwatch")]
+script = ExtResource("6_52r5k")
+parent_to_overwatch = NodePath("../../NodePlayers")
+metadata/_custom_type_script = "uid://b7w8e3iwhdjw2"
+
+[node name="Label" type="Label" parent="." unique_id=1036087952]
+anchors_preset = -1
+anchor_right = 0.296
+anchor_bottom = 0.094000004
+offset_left = -131.0
+offset_top = 182.0
+offset_right = -125.0
+offset_bottom = 205.0
+text = "-"
+
+[node name="Panel" type="Panel" parent="." unique_id=513545922]
+anchors_preset = -1
+anchor_top = 0.934
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -231.0
+offset_top = 185.0
+offset_right = -231.0
+offset_bottom = 185.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LabelIP" type="Label" parent="Panel" unique_id=150881633]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -15.0
+offset_top = 37.0
+offset_right = 87.0
+offset_bottom = 71.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "127.0.0.1"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Node" type="Node" parent="Panel/LabelIP" unique_id=750308409]
+script = ExtResource("8_tifum")
+text_join = " - "
+
+[node name="LabelPort" type="Label" parent="Panel" unique_id=924563085]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 42.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "3615"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[connection signal="on_iid_data_received" from="NesMultiListenUdpInIID" to="NesMultiListenUdpInIID/NesMultiIidDelayerRelative" method="append_delay_iid_data"]
+[connection signal="on_ready_to_be_executed" from="NesMultiListenUdpInIID/NesMultiIidDelayerRelative" to="NesMultiListenUdpInIID/NesMultiDebugIidToStringEvent" method="push_in_iid_data"]
+[connection signal="on_ready_to_be_executed" from="NesMultiListenUdpInIID/NesMultiIidDelayerRelative" to="NesMultiListenUdpInIID/NesMultiPlayerLobbyBroadcaster" method="push_command_iid_to_player"]
+[connection signal="on_refresh_ipv4_debug_text" from="Panel/LabelIP/Node" to="Panel/LabelIP" method="set_text"]

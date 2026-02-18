@@ -1,0 +1,198 @@
+[gd_scene format=3 uid="uid://dgu7n333xk7tg"]
+
+[ext_resource type="Texture2D" uid="uid://cmjw18fk0asg7" path="res://addons/2026_02_19_gdp_nes_int_multi_brackeys_2d/brackeys_bundle/sprites/knight.png" id="1_2sxs4"]
+[ext_resource type="Script" uid="uid://dp5a14mcqoh6a" path="res://addons/2026_02_19_gdp_nes_int_multi_brackeys_2d/tower_fall_like/script/nes_multi_2d_knight_move.gd" id="1_gyhfx"]
+[ext_resource type="Script" uid="uid://e4lhpqi312nh" path="res://addons/2026_01_18_gdp_nes_udp_multiplayer/script/nes_multi_player_relay_iid.gd" id="2_gyhfx"]
+[ext_resource type="Texture2D" uid="uid://cyurot6rgdx4d" path="res://addons/2026_02_19_gdp_nes_int_multi_brackeys_2d/from_web/sword.png" id="3_48rit"]
+[ext_resource type="Script" uid="uid://dk3axv60rfjdu" path="res://addons/2026_01_18_gdp_nes_udp_multiplayer/script/nes_multi_int_to_nes_signal.gd" id="3_lo364"]
+[ext_resource type="Script" uid="uid://boularll3gs5b" path="res://addons/2026_01_18_gdp_nes_udp_multiplayer/script/example/nes_multi_character_reset_at_start_when_down_2d.gd" id="5_2sxs4"]
+[ext_resource type="Script" uid="uid://c2h1gvxoqh722" path="res://addons/2026_02_19_gdp_nes_int_multi_brackeys_2d/tower_fall_like/script/tower_nes_attackable_zone.gd" id="6_2sxs4"]
+[ext_resource type="Script" uid="uid://yoqbjj36ki0f" path="res://addons/2026_02_19_gdp_nes_int_multi_brackeys_2d/tower_fall_like/script/tower_nes_attacker_zone_tag.gd" id="7_gyhfx"]
+[ext_resource type="Script" uid="uid://ce3gb7xu2lvq5" path="res://addons/2026_02_19_gdp_nes_int_multi_brackeys_2d/tower_fall_like/scene/tower_fall_kill_by_destroying.gd" id="8_lo364"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_acfjb"]
+atlas = ExtResource("1_2sxs4")
+region = Rect2(0, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2sxs4"]
+atlas = ExtResource("1_2sxs4")
+region = Rect2(32, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kh8g"]
+atlas = ExtResource("1_2sxs4")
+region = Rect2(64, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxkbd"]
+atlas = ExtResource("1_2sxs4")
+region = Rect2(96, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3td2"]
+atlas = ExtResource("1_2sxs4")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s8277"]
+atlas = ExtResource("1_2sxs4")
+region = Rect2(0, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hd43"]
+atlas = ExtResource("1_2sxs4")
+region = Rect2(32, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2yfox"]
+atlas = ExtResource("1_2sxs4")
+region = Rect2(64, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02yv3"]
+atlas = ExtResource("1_2sxs4")
+region = Rect2(96, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyhfx"]
+atlas = ExtResource("1_2sxs4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lo364"]
+atlas = ExtResource("1_2sxs4")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_48rit"]
+atlas = ExtResource("1_2sxs4")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v56ij"]
+atlas = ExtResource("1_2sxs4")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0kh8g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_acfjb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2sxs4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kh8g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxkbd")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3td2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s8277")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hd43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yfox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_02yv3")
+}],
+"loop": true,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyhfx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lo364")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_48rit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v56ij")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2sxs4"]
+radius = 5.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_acfjb"]
+radius = 5.0
+height = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gyhfx"]
+radius = 4.0
+
+[node name="NesPlayerExample" type="CharacterBody2D" unique_id=1010559735]
+script = ExtResource("1_gyhfx")
+speed = 150.0
+jump_velocity = -275.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1919550286]
+sprite_frames = SubResource("SpriteFrames_0kh8g")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatedSprite2D" unique_id=519824033]
+position = Vector2(5.9999995, 6.9999995)
+rotation = 0.9165889
+scale = Vector2(0.039999615, 0.039999615)
+texture = ExtResource("3_48rit")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=265913559]
+position = Vector2(0, 7)
+shape = SubResource("CircleShape2D_2sxs4")
+
+[node name="Script" type="Node" parent="." unique_id=1789321805]
+
+[node name="NesMultiPlayerRelayIID" type="Node" parent="Script" unique_id=2027455999]
+script = ExtResource("2_gyhfx")
+
+[node name="NesMultiIntToNesSignal" type="Node" parent="Script" unique_id=1218559830]
+script = ExtResource("3_lo364")
+
+[node name="NesMultiCharacterResetAtStartWhenDown" type="Node" parent="Script" unique_id=1115172565 node_paths=PackedStringArray("to_move")]
+script = ExtResource("5_2sxs4")
+repop_height = -7.0
+to_move = NodePath("../..")
+metadata/_custom_type_script = "uid://c4oqwxvytdux4"
+
+[node name="AttackableZone" type="Area2D" parent="." unique_id=1291458337]
+collision_layer = 9
+collision_mask = 9
+script = ExtResource("6_2sxs4")
+use_print_debug = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackableZone" unique_id=1082315323]
+position = Vector2(0, 4)
+shape = SubResource("CapsuleShape2D_acfjb")
+
+[node name="AttackerZone" type="Area2D" parent="." unique_id=1038961595]
+position = Vector2(11, 0)
+collision_layer = 9
+collision_mask = 9
+script = ExtResource("7_gyhfx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackerZone" unique_id=945989709]
+position = Vector2(-1, 6)
+shape = SubResource("CircleShape2D_gyhfx")
+
+[node name="NodeUnstore" type="Node" parent="." unique_id=1432326949]
+
+[node name="KillByDestroying" type="Node" parent="NodeUnstore" unique_id=1698607470 node_paths=PackedStringArray("node_to_destroy")]
+script = ExtResource("8_lo364")
+node_to_destroy = NodePath("../..")
+
+[connection signal="on_value_received" from="Script/NesMultiPlayerRelayIID" to="Script/NesMultiIntToNesSignal" method="push_integer_to_event"]
+[connection signal="arrow_down_pressed" from="Script/NesMultiIntToNesSignal" to="." method="set_look_down_state"]
+[connection signal="arrow_left_pressed" from="Script/NesMultiIntToNesSignal" to="." method="set_moving_left_state"]
+[connection signal="arrow_right_pressed" from="Script/NesMultiIntToNesSignal" to="." method="set_moving_right_state"]
+[connection signal="arrow_up_pressed" from="Script/NesMultiIntToNesSignal" to="." method="set_look_up_state"]
+[connection signal="button_a_pressed" from="Script/NesMultiIntToNesSignal" to="." method="set_jumping_state"]
+[connection signal="on_attacked_detected" from="AttackableZone" to="NodeUnstore/KillByDestroying" method="kill_by_destroying"]
