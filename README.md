@@ -25,8 +25,9 @@ We will now try to build some mini-games, designed for 2 to 16 players, using th
 [https://brackeysgames.itch.io/brackeys-platformer-bundle](https://brackeysgames.itch.io/brackeys-platformer-bundle)
 
 The game can receive integer inputs from:
+- https://github.com/EloiStree/2026_01_18_gdp_nes_udp_multiplayer.git 
 
-* `2026_01_18_gdp_nes_udp_multiplayer`
-* Custom code with device listeners
+You will need to use this code to send input:
+-https://github.com/EloiStree/2026_01_18_gdp_nes_controller_udp
+_(Or create your own.)_
 
-A default input system is also included, allowing the game to read NES controls directly from a device input if no external source is used.
