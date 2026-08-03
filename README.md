@@ -1,7 +1,6 @@
 **Add add submodule to a project:**
 ```
 git submodule add https://github.com/EloiStree/2026_02_19_gdp_nes_int_multi_brackeys_2d.git addons/2026_02_19_gdp_nes_int_multi_brackeys_2d
-git submodule update --init --recursive
 ```
 
 ```
